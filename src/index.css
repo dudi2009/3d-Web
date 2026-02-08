@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: 
+    linear-gradient(to top, #000000 0%, rgba(0,0,0,0.85) 40%, transparent 80%),
+    url("https://w.wallhaven.cc/full/nk/wallhaven-nkped4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Mematikan scroll bar */
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  z-index: 100;
+}
+
+.logo {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  color: #fff;
+  padding-left: 10px;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 48px;
+  margin-right: 10px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+  opacity: 0.7;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+model-viewer {
+  width: 400px;
+  height: 400px;
+  background: transparent;
+  filter: contrast(1.35) brightness(0.85) drop-shadow(0 8px 80px #000c) drop-shadow(0 0 60px #000b);
+}
+
+h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 7vw;
+  color: #dfdfdf;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* Progress Bar */
+.progress-bar {
+  display: block;
+  width: 33%;
+  height: 4px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.progress-bar.hide {
+  visibility: hidden;
+}
+
+.update-bar {
+  background-color: #fff;
+  width: 0%;
+  height: 100%;
+  border-radius: 25px;
+}
+
+#ar-button {
+  display: none;
+}
+
+#ar-prompt {
+  display: none;
+}
+
+/* Side Panel */
+.side-panel {
+  background: none;
+  color: #fff;
+  border-radius: 0;
+  padding: 0 18px;
+  font-size: 1.1rem;
+  box-shadow: none;
+  max-width: 340px;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  gap: 40px;
+  min-height: 30h;
+  align-items: center;
+  padding: 100px 5vw 0 5vw;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  text-align: left;
+  max-width: 420px;
+  color: #eaeaea;
+  font-size: 1.15rem;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25vh;
+}
+.hero-left h2{
+  margin-bottom: 20px;
+}
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #eaeaea;
+  font-size: 1.15rem;
+  max-width: 420px;
+  margin-bottom: 25vh; /* Samakan dengan hero-left agar sejajar */
+}
+
+.hero-right h4 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+
+.hero-right li {
+  margin-bottom: 0px;
+  line-height: 1.4;
+}
